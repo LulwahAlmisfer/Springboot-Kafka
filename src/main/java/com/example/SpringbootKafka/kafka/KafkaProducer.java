@@ -5,15 +5,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import javax.swing.*;
-
 @Service
-public class kafkaProducer {
+public class KafkaProducer {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(kafkaProducer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(KafkaProducer.class);
     private KafkaTemplate<String, String>  kafkaTemplate;
 
-    public kafkaProducer(KafkaTemplate<String, String> kafkaTemplate) {
+    public KafkaProducer(KafkaTemplate<String, String> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
     public void sendMessage(String message){
